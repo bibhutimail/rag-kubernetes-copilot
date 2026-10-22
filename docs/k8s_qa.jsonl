@@ -1,0 +1,8 @@
+{"question":"How do I list pods?","answer":"Run `kubectl get pods`. Add `-A` to list pods in all namespaces."}
+{"question":"How do I restart a deployment?","answer":"Run `kubectl rollout restart deployment <name>`."}
+{"question":"How do I scale a deployment?","answer":"Run `kubectl scale deployment <name> --replicas=<count>`."}
+{"question":"How do I roll back a deployment?","answer":"Run `kubectl rollout undo deployment <name>`, then check progress with `kubectl rollout status deployment <name>`."}
+{"question":"What is a ClusterIP service?","answer":"ClusterIP is the default Service type. It exposes the Service on an internal cluster IP that is reachable only from within the cluster."}
+{"question":"Why does my service have no endpoints?","answer":"The Service selector may not match any ready Pod labels. Compare `kubectl describe service <name>` with `kubectl get pods --show-labels`."}
+{"question":"What is required for an Ingress to work?","answer":"The cluster needs an Ingress controller, a matching IngressClass, a valid backend Service, and DNS or host routing to the controller."}
+{"question":"How do I inspect an ingress?","answer":"Run `kubectl describe ingress <name>` and check the rules, events, address, IngressClass, and backend Service."}
